@@ -106,7 +106,7 @@ In order to tune or change control and system parameters in any python file, acc
     R = np.diag([0.01,0.01,0.01,0.01])
     # weights for terminal state
     Q_terminal = np.diag([5, 5, 5, 3, 3, 3, 1, 1, 1, 1, 1, 1])
-```bash
+```
 
 
 ## Appendix
