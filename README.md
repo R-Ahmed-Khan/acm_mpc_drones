@@ -99,13 +99,13 @@ The quadrotor's dynamics are described by the following state-space equations, w
 #### Equations of Motion
 
 1. **Position Dynamics:**
-   $\[
+   \[
    \begin{align*}
    \dot{x} &= v_x \\
    \dot{y} &= v_y \\
    \dot{z} &= v_z \\
    \end{align*}
-   \]$
+   \]
 
 2. **Orientation Dynamics:**
    \[
