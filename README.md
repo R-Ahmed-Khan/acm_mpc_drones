@@ -85,18 +85,17 @@ The quadrotor's dynamics are described by the following state-space equations, w
 
 #### States
 
-- \( x, y, z \):  Positions in the inertial frame.
-- \( \phi, \theta, \psi \): Roll, pitch, and yaw angles.
-- \( \dot{x}, \dot{y}, \dot{z} \): Velocities in the inertial frame.
-- \( \dot{\phi}, \dot{\theta}, \dot{\psi} \): Angular velocities.
+- Positions in the inertial frame: $$\( x, y, z \)$$  
+- Roll, pitch, and yaw angles: $$\( \phi, \theta, \psi \)$$ 
+- Velocities in the inertial frame: $$\( \dot{x}, \dot{y}, \dot{z} \)$$ 
+- Angular velocities: $$\( \dot{\phi}, \dot{\theta}, \dot{\psi} \)$$ 
 
 #### Inputs
 - \( u_1, u_2, u_3, u_4 \): Propeller speeds.
 
 #### Equations of Motion
 1. **Position Dynamics:**
-2. 
-   $\[
+   \[
    \begin{align*}
    \dot{x} &= v_x \\
    \dot{y} &= v_y \\
