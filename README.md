@@ -1,7 +1,5 @@
 # acm_mpc_drones
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+
 # MPC Drone Control Project
 
 ## Overview
@@ -174,6 +172,9 @@ R = \text{diag}(0.01, 0.01, 0.01, 0.01)
 \[
 Q_{\text{terminal}} = \text{diag}(5, 5, 5, 3, 3, 3, 1, 1, 1, 1, 1, 1)
 \]
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 ## Directory Structure
 - `mpc_drone_single_point.py`: Script for single point stabilization.
