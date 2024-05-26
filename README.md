@@ -77,8 +77,37 @@ Follow these steps to set up and run the project on your local machine.
     python mpc_drone_obstacle_avoid.py
     ```
 
-### Visualizing Results
-The results can be visualized using Matplotlib. The scripts will automatically generate plots showing the drone's positions, orientations, velocities, and desired orientations over time.
+### Tuning of Parameters
+In order to tune or change control and system parameters in any python file, access the parameters in each file such as:
+
+#### Control and Dynamical parameters
+```bash
+...
+    T = 0.1                                 # sampling time [s]                        
+    N = 6                                   # prediction horizon (Final With Terminal Cost)                        
+    M_R = 0.065                             # kg, mass of rotor
+    R_R = 0.31                              # m, radius of rotor
+    Jr = 1/2 * M_R * R_R**2                 # inertia of rotor about COM
+    K1 = K2 = K3 = K4 = K5 = K6 = 0.2       # drag coefficient
+    m = 1.1                                 # mass of the quadrotor [kg]
+    g = 9.81                                # gravity [m/s^2]
+    Ix = 8.1*10**(-3)                       # moment of inertia about Bx axis [kg.m^2]
+    Iy =  8.1*10**(-3)                      # moment of inertia about By axis [kg.m^2]
+    Iz = 14.2*10**(-3)                      # moment of inertia about Bz axis [kg.m^2]
+    l = 0.17                                # quadrotor arm length [m]
+    b = 0.5                                 # thrust/lift coefficient [N.s^2]
+    d = 0.7                                 # scalling factor
+...
+```
+#### Cost Weights
+```bash
+...
+    Q = np.diag([1.2,1.2,1.2,1.2,1.2,1.2,1,1,1,1,1,1])
+    R = np.diag([0.01,0.01,0.01,0.01])
+    # weights for terminal state
+    Q_terminal = np.diag([5, 5, 5, 3, 3, 3, 1, 1, 1, 1, 1, 1])
+```bash
+
 
 ## Appendix
 
