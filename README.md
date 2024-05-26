@@ -84,11 +84,12 @@ The results can be visualized using Matplotlib. The scripts will automatically g
 The quadrotor's dynamics are described by the following state-space equations, where the state vector includes positions, orientations, and their respective velocities, and the control inputs are the propeller speeds.
 
 #### States
+$$
 - \( x, y, z \): Positions in the inertial frame.
 - \( \phi, \theta, \psi \): Roll, pitch, and yaw angles.
 - \( \dot{x}, \dot{y}, \dot{z} \): Velocities in the inertial frame.
 - \( \dot{\phi}, \dot{\theta}, \dot{\psi} \): Angular velocities.
-
+$$
 #### Inputs
 - \( u_1, u_2, u_3, u_4 \): Propeller speeds.
 
