@@ -141,7 +141,7 @@ The quadrotor's dynamics are described by the following state-space equations, w
 
 The cost function is designed to minimize the error between the current state and the desired state while penalizing large control inputs. It consists of a quadratic term for state deviation and another for control effort.
 
-$$Cost = sum_{i=0}^{N-1} ((x_i - p)^T Q (x_i - p) + u_i^T R u_i) + (x_N - p)^T Q_(terminal) (x_N - p)$$
+$$Cost = sum_{i=0}^{N-1} ((x_i - p)^T Q (x_i - p) + u_i^T R u_i) + (x_N - p)^T Q_{terminal} (x_N - p)$$
 
 
 
