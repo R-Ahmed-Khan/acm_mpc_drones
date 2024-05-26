@@ -140,8 +140,12 @@ The quadrotor's dynamics are described by the following state-space equations, w
 ### Cost Function and Weights
 
 The cost function is designed to minimize the error between the current state and the desired state while penalizing large control inputs. It consists of a quadratic term for state deviation and another for control effort.
-$$\begin{align*}\text{obj} &= \sum_{i=0}^{N-1} \left((\mathbf{x}_i - \mathbf{p})^T Q (\mathbf{x}_i - \mathbf{p}) + \mathbf{u}_i^T R \mathbf{u}_i\right) + (\mathbf{x}_N - \mathbf{p})^T Q_{\text{terminal}} (\mathbf{x}_N - \mathbf{p})\end{align*}$$
+\begin{align*}\text{obj} &= \sum_{i=0}^{N-1} \left((\mathbf{x}_i - \mathbf{p})^T Q (\mathbf{x}_i - \mathbf{p}) + \mathbf{u}_i^T R \mathbf{u}_i\right) + (\mathbf{x}_N - \mathbf{p})^T Q_{\text{terminal}} (\mathbf{x}_N - \mathbf{p})\end{align*}
 
+```html
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 ## Directory Structure
 - `mpc_drone_single_point.py`: Script for single point stabilization.
