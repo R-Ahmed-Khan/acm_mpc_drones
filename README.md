@@ -137,7 +137,7 @@ The quadrotor's dynamics are described by the following state-space equations, w
 #### Input Constraints
 - Propeller Speeds: $$\( 0 \leq u_1, u_2, u_3, u_4 \leq 1200 \)$$
 
-### Cost Function and Weights
+### Cost Function 
 
 The cost function is designed to minimize the error between the current state and the desired state while penalizing large control inputs. It consists of a quadratic term for state deviation and another for control effort.
 
