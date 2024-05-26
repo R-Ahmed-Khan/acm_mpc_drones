@@ -94,35 +94,18 @@ The quadrotor's dynamics are described by the following state-space equations, w
 - \( u_1, u_2, u_3, u_4 \): Propeller speeds.
 
 #### Equations of Motion
-1. **Position Dynamics:**
-   \[
-   \begin{align*}
-   \dot{x} &= v_x \\
-   \dot{y} &= v_y \\
-   \dot{z} &= v_z \\
-   \end{align*}
-   \]$
 
-3. **Orientation Dynamics:**
-   \[
-   \begin{align*}
-   \dot{\phi} &= \omega_x \\
-   \dot{\theta} &= \omega_y \\
-   \dot{\psi} &= \omega_z \\
-   \end{align*}
-   \]
-
-4. **Velocity Dynamics:**
+1. **Velocity Dynamics:**
 $$
    \[
    \begin{align*}
-   \dot{v_x} &= \frac{1}{m}\left(\cos(\phi) \sin(\theta) \cos(\psi) + \sin(\phi) \sin(\psi)\right) f_1 - \frac{K_1 v_x}{m} \\
+   $$\dot{v_x} &= \frac{1}{m}\left(\cos(\phi) \sin(\theta) \cos(\psi) + \sin(\phi) \sin(\psi)\right) f_1 - \frac{K_1 v_x}{m} \\
    \dot{v_y} &= \frac{1}{m}\left(\cos(\phi) \sin(\theta) \sin(\psi) - \sin(\phi) \cos(\psi)\right) f_1 - \frac{K_2 v_y}{m} \\
-   \dot{v_z} &= -\frac{1}{m}\left(\cos(\psi) \cos(\theta)\right) f_1 + g - \frac{K_3 v_z}{m} \\
+   \dot{v_z} &= -\frac{1}{m}\left(\cos(\psi) \cos(\theta)\right) f_1 + g - \frac{K_3 v_z}{m} \\$$
    \end{align*}
    \]
 $$
-6. **Angular Velocity Dynamics:**
+2. **Angular Velocity Dynamics:**
    \[
    \begin{align*}
    \dot{\omega_x} &= \frac{I_y - I_z}{I_x} \omega_y \omega_z + \frac{l}{I_x} f_2 - \frac{K_4 l}{I_x} \omega_x + \frac{J_r}{I_x} \omega_y (u_1 - u_2 + u_3 - u_4) \\
