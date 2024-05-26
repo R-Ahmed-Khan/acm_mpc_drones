@@ -102,10 +102,9 @@ In order to tune or change control and system parameters in any python file, acc
 #### Cost Weights
 ```bash
 ...
-    Q = np.diag([1.2,1.2,1.2,1.2,1.2,1.2,1,1,1,1,1,1])
-    R = np.diag([0.01,0.01,0.01,0.01])
-    # weights for terminal state
-    Q_terminal = np.diag([5, 5, 5, 3, 3, 3, 1, 1, 1, 1, 1, 1])
+    Q = np.diag([1.2,1.2,1.2,1.2,1.2,1.2,1,1,1,1,1,1])             # weights for states
+    R = np.diag([0.01,0.01,0.01,0.01])                             # weights for inputs
+    Q_terminal = np.diag([5, 5, 5, 3, 3, 3, 1, 1, 1, 1, 1, 1])     # weights for terminal states
 ```
 
 
