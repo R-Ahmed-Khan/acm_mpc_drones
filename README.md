@@ -122,10 +122,10 @@ The quadrotor's dynamics are described by the following state-space equations, w
    $$\dot{\omega_z} = \frac{I_x - I_y}{I_z} \omega_x \omega_y + \frac{1}{I_z} f_4 - \frac{K_6}{I_z} \omega_z$$
 
 #### Forces and Torques
-- Thrust: $$\f_1 = b(u_1^2 + u_2^2 + u_3^2 + u_4^2) $$
-- Roll Moment: $$\f_2 = b(-u_2^2 + u_4^2) $$
-- Pitch Moment: $$\f_3 = b(u_1^2 - u_3^2) $$
-- Yaw Moment: $$\f_4 = d(-u_1^2 + u_2^2 - u_3^2 + u_4^2) $$
+- Thrust: $$f_1 = b(u_1^2 + u_2^2 + u_3^2 + u_4^2) $$
+- Roll Moment: $$f_2 = b(-u_2^2 + u_4^2) $$
+- Pitch Moment: $$f_3 = b(u_1^2 - u_3^2) $$
+- Yaw Moment: $$f_4 = d(-u_1^2 + u_2^2 - u_3^2 + u_4^2) $$
 
 ### State and Input Constraints
 #### State Constraints
