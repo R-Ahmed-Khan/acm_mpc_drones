@@ -85,7 +85,7 @@ The quadrotor's dynamics are described by the following state-space equations, w
 
 #### States
 
-- $$\( x, y, z \): $$ Positions in the inertial frame.
+- \( x, y, z \):  Positions in the inertial frame.
 - \( \phi, \theta, \psi \): Roll, pitch, and yaw angles.
 - \( \dot{x}, \dot{y}, \dot{z} \): Velocities in the inertial frame.
 - \( \dot{\phi}, \dot{\theta}, \dot{\psi} \): Angular velocities.
@@ -95,6 +95,7 @@ The quadrotor's dynamics are described by the following state-space equations, w
 
 #### Equations of Motion
 1. **Position Dynamics:**
+   $$
    \[
    \begin{align*}
    \dot{x} &= v_x \\
@@ -102,8 +103,9 @@ The quadrotor's dynamics are described by the following state-space equations, w
    \dot{z} &= v_z \\
    \end{align*}
    \]
+   $$
 
-2. **Orientation Dynamics:**
+3. **Orientation Dynamics:**
    \[
    \begin{align*}
    \dot{\phi} &= \omega_x \\
@@ -112,7 +114,7 @@ The quadrotor's dynamics are described by the following state-space equations, w
    \end{align*}
    \]
 
-3. **Velocity Dynamics:**
+4. **Velocity Dynamics:**
    \[
    \begin{align*}
    \dot{v_x} &= \frac{1}{m}\left(\cos(\phi) \sin(\theta) \cos(\psi) + \sin(\phi) \sin(\psi)\right) f_1 - \frac{K_1 v_x}{m} \\
@@ -121,7 +123,7 @@ The quadrotor's dynamics are described by the following state-space equations, w
    \end{align*}
    \]
 
-4. **Angular Velocity Dynamics:**
+5. **Angular Velocity Dynamics:**
    \[
    \begin{align*}
    \dot{\omega_x} &= \frac{I_y - I_z}{I_x} \omega_y \omega_z + \frac{l}{I_x} f_2 - \frac{K_4 l}{I_x} \omega_x + \frac{J_r}{I_x} \omega_y (u_1 - u_2 + u_3 - u_4) \\
