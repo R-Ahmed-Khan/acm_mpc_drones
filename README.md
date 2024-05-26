@@ -129,7 +129,7 @@ The quadrotor's dynamics are described by the following state-space equations, w
 
 ### State and Input Constraints
 #### State Constraints
-- Position: $$\infty \leq x \leq +\infty$$
+- Position: $$\infty \leq x,y,z \leq +\infty$$
 - Orientation: $$\( -\pi/2 \leq \phi, \theta, \psi \leq \pi/2 \)$$
 - Velocities: $$\( -5 \, \text{m/s} \leq v_x, v_y, v_z \leq 5 \, \text{m/s} \)$$
 - Angular Velocities: $$\( -0.05 \, \text{rad/s} \leq \omega_x, \omega_y, \omega_z \leq 0.05 \, \text{rad/s} \)$$
@@ -140,7 +140,7 @@ The quadrotor's dynamics are described by the following state-space equations, w
 ### Cost Function and Weights
 
 The cost function is designed to minimize the error between the current state and the desired state while penalizing large control inputs. It consists of a quadratic term for state deviation and another for control effort.
-$$\text{obj} &= \sum_{i=0}^{N-1} \left((\mathbf{x}_i - \mathbf{p})^T Q (\mathbf{x}_i - \mathbf{p}) + \mathbf{u}_i^T R \mathbf{u}_i\right) + (\mathbf{x}_N - \mathbf{p})^T Q_{\text{terminal}} (\mathbf{x}_N - \mathbf{p})$$
+$$\begin{align*}\text{obj} &= \sum_{i=0}^{N-1} \left((\mathbf{x}_i - \mathbf{p})^T Q (\mathbf{x}_i - \mathbf{p}) + \mathbf{u}_i^T R \mathbf{u}_i\right) + (\mathbf{x}_N - \mathbf{p})^T Q_{\text{terminal}} (\mathbf{x}_N - \mathbf{p})\end{align*}$$
 
 
 ## Directory Structure
