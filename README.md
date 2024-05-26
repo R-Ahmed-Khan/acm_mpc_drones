@@ -88,93 +88,60 @@ The quadrotor's dynamics are described by the following state-space equations, w
 
 #### States
 
-- \( x, y, z \): Positions in the inertial frame.
-- \( \phi, \theta, \psi \): Roll, pitch, and yaw angles.
-- \( \dot{x}, \dot{y}, \dot{z} \): Velocities in the inertial frame.
-- \( \dot{\phi}, \dot{\theta}, \dot{\psi} \): Angular velocities.
+- Positions in the inertial frame: $$\( x, y, z \)$$ 
+- Roll, pitch, and yaw angles: $$\( \phi, \theta, \psi \)$$ 
+- Velocities in the inertial frame: $$\( \dot{x}, \dot{y}, \dot{z} \)$$ 
+- Angular velocities: $$\( \dot{\phi}, \dot{\theta}, \dot{\psi} \)$$ 
 
 #### Inputs
-- \( u_1, u_2, u_3, u_4 \): Propeller speeds.
+- : Propeller speeds on each: $$\( u_1, u_2, u_3, u_4 \)$$
 
 #### Equations of Motion
 
-1. **Position Dynamics:**
-   \[
-   \dot{x} = v_x \\
-   \dot{y} = v_y \\
-   \dot{z} = v_z \\
-   \]
+1. **Position Dynamics:**  
+   $$\dot{x} = v_x $$
+   $$\dot{y} = v_y $$
+   $$\dot{z} = v_z $$
+
 
 2. **Orientation Dynamics:**
-   \[
-   \dot{\phi} = \omega_x \\
-   \dot{\theta} = \omega_y \\
-   \dot{\psi} = \omega_z \\
-   \]
+   $$\dot{\phi} = \omega_x $$
+   $$\dot{\theta} = \omega_y $$
+   $$\dot{\psi} = \omega_z $$
 
 3. **Velocity Dynamics:**
-   \[
+
    $$\dot{v_x} = \frac{1}{m}\left(\cos(\phi) \sin(\theta) \cos(\psi) + \sin(\phi) \sin(\psi)\right) f_1 - \frac{K_1 v_x}{m}$$
-   \dot{v_y} = \frac{1}{m}\left(\cos(\phi) \sin(\theta) \sin(\psi) - \sin(\phi) \cos(\psi)\right) f_1 - \frac{K_2 v_y}{m} \\
-   \dot{v_z} = -\frac{1}{m}\left(\cos(\psi) \cos(\theta)\right) f_1 + g - \frac{K_3 v_z}{m} \\
-   \]
+   $$\dot{v_y} = \frac{1}{m}\left(\cos(\phi) \sin(\theta) \sin(\psi) - \sin(\phi) \cos(\psi)\right) f_1 - \frac{K_2 v_y}{m}$$
+   $$\dot{v_z} = -\frac{1}{m}\left(\cos(\psi) \cos(\theta)\right) f_1 + g - \frac{K_3 v_z}{m}$$
+
 
 4. **Angular Velocity Dynamics:**
-   \[
-   \dot{\omega_x} = \frac{I_y - I_z}{I_x} \omega_y \omega_z + \frac{l}{I_x} f_2 - \frac{K_4 l}{I_x} \omega_x + \frac{J_r}{I_x} \omega_y (u_1 - u_2 + u_3 - u_4) \\
-   \dot{\omega_y} = \frac{I_z - I_x}{I_y} \omega_x \omega_z + \frac{l}{I_y} f_3 - \frac{K_5 l}{I_y} \omega_y + \frac{J_r}{I_y} \omega_z (u_1 - u_2 + u_3 - u_4) \\
-   \dot{\omega_z} = \frac{I_x - I_y}{I_z} \omega_x \omega_y + \frac{1}{I_z} f_4 - \frac{K_6}{I_z} \omega_z \\
-   \]
+   $$\dot{\omega_x} = \frac{I_y - I_z}{I_x} \omega_y \omega_z + \frac{l}{I_x} f_2 - \frac{K_4 l}{I_x} \omega_x + \frac{J_r}{I_x} \omega_y (u_1 - u_2 + u_3 - u_4)$$
+   $$\dot{\omega_y} = \frac{I_z - I_x}{I_y} \omega_x \omega_z + \frac{l}{I_y} f_3 - \frac{K_5 l}{I_y} \omega_y + \frac{J_r}{I_y} \omega_z (u_1 - u_2 + u_3 - u_4)$$
+   $$\dot{\omega_z} = \frac{I_x - I_y}{I_z} \omega_x \omega_y + \frac{1}{I_z} f_4 - \frac{K_6}{I_z} \omega_z$$
 
 #### Forces and Torques
-- \( f_1 = b(u_1^2 + u_2^2 + u_3^2 + u_4^2) \): Thrust
-- \( f_2 = b(-u_2^2 + u_4^2) \): Roll moment
-- \( f_3 = b(u_1^2 - u_3^2) \): Pitch moment
-- \( f_4 = d(-u_1^2 + u_2^2 - u_3^2 + u_4^2) \): Yaw moment
-
-#### Parameters
-- \( m = 1.1 \, \text{kg} \): Mass of the quadrotor
-- \( g = 9.81 \, \text{m/s}^2 \): Gravity
-- \( I_x = 8.1 \times 10^{-3} \, \text{kg.m}^2 \): Moment of inertia about x-axis
-- \( I_y = 8.1 \times 10^{-3} \, \text{kg.m}^2 \): Moment of inertia about y-axis
-- \( I_z = 14.2 \times 10^{-3} \, \text{kg.m}^2 \): Moment of inertia about z-axis
-- \( l = 0.17 \, \text{m} \): Arm length
-- \( b = 0.5 \, \text{N.s}^2 \): Thrust coefficient
-- \( d = 0.7 \): Drag coefficient
-- \( J_r = 1/2 M_R R_R^2 \): Rotor inertia
-- \( K_1, K_2, K_3, K_4, K_5, K_6 = 0.2 \): Drag coefficients
+- Thrust: $$\( f_1 = b(u_1^2 + u_2^2 + u_3^2 + u_4^2) \)$$
+- Roll Moment: $$\( f_2 = b(-u_2^2 + u_4^2) \)$$
+- Pitch Moment: $$\( f_3 = b(u_1^2 - u_3^2) \)$$
+- Yaw Moment: $$\( f_4 = d(-u_1^2 + u_2^2 - u_3^2 + u_4^2) \)$$
 
 ### State and Input Constraints
 #### State Constraints
-- Position: Unbounded
-- Orientation: \( -\pi/2 \leq \phi, \theta, \psi \leq \pi/2 \)
-- Velocities: \( -5 \, \text{m/s} \leq v_x, v_y, v_z \leq 5 \, \text{m/s} \)
-- Angular Velocities: \( -0.05 \, \text{rad/s} \leq \omega_x, \omega_y, \omega_z \leq 0.05 \, \text{rad/s} \)
+- Position: $$\infty \leq x \leq +\infty$$
+- Orientation: $$\( -\pi/2 \leq \phi, \theta, \psi \leq \pi/2 \)$$
+- Velocities: $$\( -5 \, \text{m/s} \leq v_x, v_y, v_z \leq 5 \, \text{m/s} \)$$
+- Angular Velocities: $$\( -0.05 \, \text{rad/s} \leq \omega_x, \omega_y, \omega_z \leq 0.05 \, \text{rad/s} \)$$
 
 #### Input Constraints
-- Propeller Speeds: \( 0 \leq u_1, u_2, u_3, u_4 \leq 1200 \)
+- Propeller Speeds: $$\( 0 \leq u_1, u_2, u_3, u_4 \leq 1200 \)$$
 
 ### Cost Function and Weights
 
 The cost function is designed to minimize the error between the current state and the desired state while penalizing large control inputs. It consists of a quadratic term for state deviation and another for control effort.
+$$\text{obj} &= \sum_{i=0}^{N-1} \left((\mathbf{x}_i - \mathbf{p})^T Q (\mathbf{x}_i - \mathbf{p}) + \mathbf{u}_i^T R \mathbf{u}_i\right) + (\mathbf{x}_N - \mathbf{p})^T Q_{\text{terminal}} (\mathbf{x}_N - \mathbf{p})$$
 
-#### State Cost Weights
-\[
-Q = \text{diag}(1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1, 1, 1, 1, 1, 1)
-\]
-
-#### Control Cost Weights
-\[
-R = \text{diag}(0.01, 0.01, 0.01, 0.01)
-\]
-
-#### Terminal Cost Weights
-\[
-Q_{\text{terminal}} = \text{diag}(5, 5, 5, 3, 3, 3, 1, 1, 1, 1, 1, 1)
-\]
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
 
 ## Directory Structure
 - `mpc_drone_single_point.py`: Script for single point stabilization.
