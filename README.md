@@ -96,7 +96,7 @@ The quadrotor's dynamics are described by the following state-space equations, w
 #### Equations of Motion
 
 1. **Velocity Dynamics:**
-$$
+$'
    \[
    \begin{align*}
    $$\dot{v_x} &= \frac{1}{m}\left(\cos(\phi) \sin(\theta) \cos(\psi) + \sin(\phi) \sin(\psi)\right) f_1 - \frac{K_1 v_x}{m} \\
@@ -104,7 +104,7 @@ $$
    \dot{v_z} &= -\frac{1}{m}\left(\cos(\psi) \cos(\theta)\right) f_1 + g - \frac{K_3 v_z}{m} \\$$
    \end{align*}
    \]
-$$
+'$
 2. **Angular Velocity Dynamics:**
    \[
    \begin{align*}
