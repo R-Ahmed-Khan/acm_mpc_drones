@@ -5,10 +5,10 @@
 This project implements a Model Predictive Control (MPC) strategy for stabilizing and navigating a quadrotor drone. The controller is designed to manage the drone's position, orientation, and velocity in three-dimensional space. The codebase includes functions to simulate the drone's dynamics, generate optimal control inputs, and visualize the results.
 
 **Team Members:**
-- [Your Name]
-- [Team Member 1]
-- [Team Member 2]
-- [Team Member 3]
+- Roohan Ahmed Khan
+- Malaika Zafar
+- Amber Batool
+
 
 **Presentation:** [Final Presentation Link](https://your-presentation-link.com)
 
