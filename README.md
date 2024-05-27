@@ -9,7 +9,7 @@
 4. [Running the Project](#running_project)
 5. [Appendix](#appendix)
 6. [Bibliography](#bibliography)
-7. [Directory Structure](directory_struct)
+7. [Directory Structure](#directory_struct)
 
 ## Overview <a id="overview"></a>
 In this project, we implement Nonlinear Model Predictive Control (NMPC) to achieve advanced control for quadrotor drones. Unlike traditional Linear MPC, NMPC can handle the nonlinear dynamics of quadrotors, making it a more suitable approach for high-precision and dynamic tasks such as drone racing.
