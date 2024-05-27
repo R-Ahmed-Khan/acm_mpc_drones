@@ -33,7 +33,7 @@ The implemented MPC controller successfully stabilizes the drone at the desired 
 The following plots illustrate the performance of the MPC controller:
 
 1. **MPC Responses**
-  (results/DroneTrajectory3D_N_8.png)
+  ![check](DroneTrajectory3D_NTC_N_8.gif)
 
 2. **Orientation of Drone over Time**
    ![Orientation of Drone](images/orientation_plot.png)
