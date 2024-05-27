@@ -25,7 +25,7 @@ Quadrotors exhibit highly nonlinear behavior, especially when performing aggress
 - Amber Batool
 
 
-**Presentation:** [Final Presentation Link](https://your-presentation-link.com)
+**Presentation:** [MPC Drones Final Presentation Link](https://drive.google.com/drive/folders/1_NmLRhVBVJ4dzUBCr3J3u0CD-pCCAsIg)
 
 ## Problem Statement
 The primary objective of this project is to develop a control system for fully non-linear quadrotor system that can achieve following tasks:
