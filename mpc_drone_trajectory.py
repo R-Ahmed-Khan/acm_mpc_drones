@@ -2,10 +2,10 @@ import casadi as ca
 import numpy as np
 import time
 from pprint import pprint
-from draw import *
+from resources.draw import *
 from matplotlib import pyplot as plt
 from trajectory import trajectory
-from draw import Draw_MPC_point_stabilization_3D
+from resources.draw import Draw_MPC_point_stabilization_3D
 
 
 def shift_movement(T, t0, x0, u, f):
