@@ -53,7 +53,7 @@ Follow these steps to set up and run the project on your local machine.
 1. Clone the repository:
     ```bash
     git clone https://github.com/R-Ahmed-Khan/acm_mpc_drones.git
-    cd mpc-drone-control
+    cd acm_mpc_drones
     ```
 
 2. Install the required packages:
@@ -178,8 +178,8 @@ $$Cost = \sum_{i=0}^{N-1} ((x_i - p)^T Q (x_i - p) + u_i^T R u_i) + (x_N - p)^T 
 - `mpc_drone_single_point.py`: Script for single point stabilization.
 - `mpc_drone_trajectory.py`: Script for trajectory tracking.
 - `mpc_drone_obstacle_avoid.py`: Script for obstacle avoidance.
-- `plotting.py`: Helper functions for plotting results.
+- `draw.py`: Helper functions for plotting results.
 - `trajectory.py`: Helper functions for trajectory generation.
-- `images/`: Directory containing generated plots for visualization.
+- `results/`: Directory containing generated plots for visualization.
 
 
