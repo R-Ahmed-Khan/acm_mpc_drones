@@ -2,6 +2,15 @@
 
 # NMPC Drone Control Project
 
+## Table of Contents
+1. Overview
+2. Problem Statement
+3. Results
+4. Running the Project
+5. Appendix
+6. Bibliography
+7. Directory Structure
+
 ## Overview
 In this project, we implement Nonlinear Model Predictive Control (NMPC) to achieve advanced control for quadrotor drones. Unlike traditional Linear MPC, NMPC can handle the nonlinear dynamics of quadrotors, making it a more suitable approach for high-precision and dynamic tasks such as drone racing.
 
@@ -192,6 +201,15 @@ The cost function is designed to minimize the error between the current state an
 $$Cost = \sum_{i=0}^{N-1} ((x_i - x_p)^T Q (x_i - x_p) + u_i^T R u_i) + (x_N - x_p)^T Q_{terminal} (x_N - x_p)$$
 where $$x_p$$ is desired state, $$x_i$$ is current state and $$x_N$$ is terminal state
 
+## Bibliography
+
+1. M. Islam, M. Okasha, and M. M. Idres, “Dynamics and control of quadcopter using linear model predictive control approach,” IOP Conf. Ser. Mater. Sci. Eng., vol. 270, p. 012007, Dec. 2017, doi: 10.1088/1757-899X/270/1/012007.
+2. F. Adıgüzel and T. V. Mumcu, “Discrete-time Backstepping Attitude Control of a Quadrotor UAV,” in 2019 International Artificial Intelligence and Data Processing Symposium (IDAP), Sep. 2019, pp. 1–5. doi: 10.1109/IDAP.2019.8875891.
+3. “Nonlinear Model Predictive Control of a Quadrotor.” Accessed: May 27, 2024. [Online]. Available: https://upcommons.upc.edu/handle/2117/98503
+4. “Applied Sciences | Free Full-Text | A Comparative Study for Control of Quadrotor UAVs.” Accessed: May 27, 2024. [Online]. Available: https://www.mdpi.com/2076-3417/13/6/3464
+5. “(2) MPC and MHE implementation in Matlab using Casadi - YouTube.” Accessed: May 27, 2024. [Online]. Available: https://www.youtube.com/playlist?list=PLK8squHT_Uzej3UCUHjtOtm5X7pMFSgAL
+6. M. W. Mehrez, “MMehrez/MPC-and-MHE-implementation-in-MATLAB-using-Casadi.” May 19, 2024. Accessed: May 27, 2024. [Online]. Available: https://github.com/MMehrez/MPC-and-MHE-implementation-in-MATLAB-using-Casadi
+7.	“Energies | Free Full-Text | Non-Linear Model Predictive Control Using CasADi Package for Trajectory Tracking of Quadrotor.” Accessed: May 27, 2024. [Online]. Available: https://www.mdpi.com/1996-1073/16/5/2143
 
 ## Directory Structure
 - `mpc_drone_single_point.py`: Script for single point stabilization.
