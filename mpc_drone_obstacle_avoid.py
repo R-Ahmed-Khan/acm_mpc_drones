@@ -1,7 +1,7 @@
 import casadi as ca
 import numpy as np
 import time
-from draw import *
+from resources.draw import *
 from matplotlib import pyplot as plt
 
 def shift_movement(T, t0, x0, u, f):
