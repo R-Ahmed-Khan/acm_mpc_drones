@@ -53,7 +53,7 @@ The following plots illustrate the performance of the MPC controller:
 
 2. **Trajectory Tracking to pass through gates**
    
-   ![Passing through Gates trajectory](results/trajectory.jpeg)
+                ![Passing through Gates trajectory](results/trajectory.jpeg)
    
 3. **Obstalce Avoidance (2D View)**
 
