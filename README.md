@@ -52,7 +52,7 @@ Follow these steps to set up and run the project on your local machine.
 ### Installation
 1. Clone the repository:
     ```bash
-    git clone [https://github.com/yourusername/mpc-drone-control.git](https://github.com/R-Ahmed-Khan/acm_mpc_drones.git)
+    git clone https://github.com/R-Ahmed-Khan/acm_mpc_drones.git
     cd mpc-drone-control
     ```
 
