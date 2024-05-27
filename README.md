@@ -177,7 +177,7 @@ The quadrotor's dynamics are described by the following state-space equations, w
 
 ### State and Input Constraints
 #### State Constraints
-- Position: $$\infty \leq x,y,z \leq +\infty$$
+- Position: $$-\infty \leq x,y,z \leq +\infty$$
 - Orientation: $$\( -\pi/2 \leq \phi, \theta, \psi \leq \pi/2 \)$$
 - Velocities: $$\( -5 \, \text{m/s} \leq v_x, v_y, v_z \leq 5 \, \text{m/s} \)$$
 - Angular Velocities: $$\( -0.05 \, \text{rad/s} \leq \omega_x, \omega_y, \omega_z \leq 0.05 \, \text{rad/s} \)$$
