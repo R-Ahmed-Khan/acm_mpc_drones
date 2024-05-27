@@ -42,6 +42,7 @@ The project explores the application of MPC for trajectory tracking and obstacle
 The implemented MPC controller successfully stabilizes the drone at the desired point and follows specified trajectories. The results include:
 - Response of MPC for single point stabilization
 - Stability in orientation and velocity for trajectory tracking.
+- Obstacle Avoidance 2D Animation
 
 ### Visual Aids
 The following plots illustrate the performance of the MPC controller:
@@ -52,7 +53,11 @@ The following plots illustrate the performance of the MPC controller:
 
 2. **Trajectory Tracking to pass through gates**
    
-   ![Passing through Gates trajectory](results/trajectory_plot.png)
+   ![Passing through Gates trajectory](results/trajectory.jpeg)
+   
+3. **Obstalce Avoidance (2D View)**
+
+   ![Obstacle Avoidance](results/drone_obs_avoid.gif)
 
 ## Running the Project
 Follow these steps to set up and run the project on your local machine.
