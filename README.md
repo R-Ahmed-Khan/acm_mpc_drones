@@ -4,12 +4,12 @@
 
 ## Table of Contents
 1. [Overview](#overview)
-2. Problem Statement
-3. Results
-4. Running the Project
-5. Appendix
-6. Bibliography
-7. Directory Structure
+2. [Problem Statement](#problem_statement)
+3. [Results](#results)
+4. [Running the Project](#running_project)
+5. [Appendix](#appendix)
+6. [Bibliography](#bibliography)
+7. [Directory Structure](directory_struct)
 
 ## Overview <a id="overview"></a>
 In this project, we implement Nonlinear Model Predictive Control (NMPC) to achieve advanced control for quadrotor drones. Unlike traditional Linear MPC, NMPC can handle the nonlinear dynamics of quadrotors, making it a more suitable approach for high-precision and dynamic tasks such as drone racing.
@@ -36,7 +36,7 @@ Quadrotors exhibit highly nonlinear behavior, especially when performing aggress
 
 **Presentation:** [MPC Drones Final Presentation Link](https://drive.google.com/drive/folders/1E5tKipE3HwYkDtr1KWob1nK1J_9sDaNs?usp=drive_link)
 
-## Problem Statement
+## Problem Statement <a id="problem_statement"></a>
 The primary objective of this project is to develop a control system for fully non-linear quadrotor system that can achieve following tasks:
 - Fast point stabilization 
 - Follow trajectory to pass through gates precisely
@@ -47,7 +47,7 @@ Quadrotors are widely used in various applications such as aerial photography, s
 ### Importance
 The project explores the application of MPC for trajectory tracking and obstacle avoidance while passing through gates, highlighting its potential for enhancing performance in this intense sport. The insights gained pave the way for future innovations, offering the potential to revolutionize drone racing with cutting-edge algorithms and strategies. Additionally, addressing the nonlinear dynamics and external disturbances inherent in quadrotor systems is vital for ensuring safe and reliable operation in real-world scenarios. This project emphasizes the importance of MPC in overcoming these challenges, setting the stage for future advancements in drone racing technology.
 
-## Results
+## Results <a id="results"></a>
 The implemented MPC controller successfully stabilizes the drone at the desired point and follows specified trajectories. The results include:
 - Response of MPC for single point stabilization
 - Stability in orientation and velocity for trajectory tracking.
@@ -68,7 +68,7 @@ The following plots illustrate the performance of the MPC controller:
 
    ![Obstacle Avoidance](results/drone_obs_avoid.gif)
 
-## Running the Project
+## Running the Project <a id="running_project"></a>
 Follow these steps to set up and run the project on your local machine.
 
 ### Prerequisites
@@ -137,7 +137,7 @@ In order to tune or change control and system parameters in any python file, acc
 ```
 
 
-## Appendix
+## Appendix <a id="appendix"></a>
 
 ### Quadrotor Dynamics
 
@@ -201,7 +201,7 @@ The cost function is designed to minimize the error between the current state an
 $$Cost = \sum_{i=0}^{N-1} ((x_i - x_p)^T Q (x_i - x_p) + u_i^T R u_i) + (x_N - x_p)^T Q_{terminal} (x_N - x_p)$$
 where $$x_p$$ is desired state, $$x_i$$ is current state and $$x_N$$ is terminal state
 
-## Bibliography
+## Bibliography <a id="bibliography"></a>
 
 1. M. Islam, M. Okasha, and M. M. Idres, “Dynamics and control of quadcopter using linear model predictive control approach,” IOP Conf. Ser. Mater. Sci. Eng., vol. 270, p. 012007, Dec. 2017, doi: 10.1088/1757-899X/270/1/012007.
 2. F. Adıgüzel and T. V. Mumcu, “Discrete-time Backstepping Attitude Control of a Quadrotor UAV,” in 2019 International Artificial Intelligence and Data Processing Symposium (IDAP), Sep. 2019, pp. 1–5. doi: 10.1109/IDAP.2019.8875891.
@@ -211,7 +211,7 @@ where $$x_p$$ is desired state, $$x_i$$ is current state and $$x_N$$ is terminal
 6. M. W. Mehrez, “MMehrez/MPC-and-MHE-implementation-in-MATLAB-using-Casadi.” May 19, 2024. Accessed: May 27, 2024. [Online]. Available: https://github.com/MMehrez/MPC-and-MHE-implementation-in-MATLAB-using-Casadi
 7.	“Energies | Free Full-Text | Non-Linear Model Predictive Control Using CasADi Package for Trajectory Tracking of Quadrotor.” Accessed: May 27, 2024. [Online]. Available: https://www.mdpi.com/1996-1073/16/5/2143
 
-## Directory Structure
+## Directory Structure <a id="directory_struct"></a>
 - `mpc_drone_single_point.py`: Script for single point stabilization.
 - `mpc_drone_trajectory.py`: Script for trajectory tracking.
 - `mpc_drone_obstacle_avoid.py`: Script for obstacle avoidance.
