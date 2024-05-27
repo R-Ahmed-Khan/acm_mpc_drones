@@ -1,9 +1,23 @@
 # acm_mpc_drones
 
-# MPC Drone Control Project
+# NMPC Drone Control Project
 
 ## Overview
-This project implements a Model Predictive Control (MPC) strategy for stabilizing and navigating a quadrotor drone. The controller is designed to manage the drone's position, orientation, and velocity in three-dimensional space. The codebase includes functions to simulate the drone's dynamics, generate optimal control inputs, and visualize the results.
+In this project, we implement Nonlinear Model Predictive Control (NMPC) to achieve advanced control for quadrotor drones. Unlike traditional Linear MPC, NMPC can handle the nonlinear dynamics of quadrotors, making it a more suitable approach for high-precision and dynamic tasks such as drone racing.
+
+### Why NMPC?
+
+Quadrotors exhibit highly nonlinear behavior, especially when performing aggressive maneuvers or flying in environments with obstacles. NMPC is designed to optimize control actions by solving a nonlinear programming (NLP) problem at each time step, which allows for:
+
+- **Accurate Trajectory Tracking**: Ensuring the quadrotor follows the desired path with high precision.
+- **Obstacle Avoidance**: Dynamically adjusting the trajectory to avoid collisions.
+- **Rapid Point Stabilization**: Quickly stabilizing the quadrotor at specific points, which is crucial in tasks like passing through gates in drone racing.
+
+### Key Features
+
+- **Nonlinear Dynamics Handling**: Unlike Linear MPC, NMPC can directly incorporate the nonlinear equations of motion of the quadrotor, providing more accurate control.
+- **Optimization-Based Control**: Using NLP, the controller optimizes future control actions over a prediction horizon, considering both the current state and future states of the quadrotor.
+- **Flexibility and Robustness**: NMPC can adapt to various flight conditions and disturbances, making it a robust solution for real-world applications.
 
 **Team Members:**
 - Roohan Ahmed Khan
