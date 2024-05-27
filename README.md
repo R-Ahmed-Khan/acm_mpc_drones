@@ -219,4 +219,4 @@ where $$x_p$$ is desired state, $$x_i$$ is current state and $$x_N$$ is terminal
 - `resources/trajectory.py`: Helper functions for trajectory generation.
 - `results/`: Directory containing generated plots for visualization.
 
-
+Feel free to utilize this repository for your projects :)
