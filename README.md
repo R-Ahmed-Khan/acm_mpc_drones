@@ -52,7 +52,7 @@ The following plots illustrate the performance of the MPC controller:
 
 2. **Trajectory Tracking to pass through gates**
    
-   ![Desired Orientations of Drone](images/desired_orientation_plot.png)
+   ![Passing through Gates trajectory](results/trajectory_plot.png)
 
 ## Running the Project
 Follow these steps to set up and run the project on your local machine.
