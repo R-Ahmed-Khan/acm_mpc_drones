@@ -26,21 +26,18 @@ The project explores the application of MPC for trajectory tracking and obstacle
 
 ## Results
 The implemented MPC controller successfully stabilizes the drone at the desired point and follows specified trajectories. The results include:
-- Responses of MPC for different horizons (N) and costs
+- Response of MPC for single point stabilization
 - Stability in orientation and velocity for trajectory tracking.
 
 ### Visual Aids
 The following plots illustrate the performance of the MPC controller:
 
-1. **MPC Responses**
+1. **MPC Response for point stabilization with terminal cost**
    
-   ![Point Stabilization for N = 8 without terminal cost](results/point_stable_n_8_ntp.gif)
-
-   ![Point Stabilization for N = 6 without terminal cost](results/point_stable_n_6_ntp.gif)
-
    ![Point Stabilization for N = 6 with terminal cost](results/point_stable_n_6_tp.gif)
 
-3. **Trajectory Tracking to pass through gates**
+2. **Trajectory Tracking to pass through gates**
+   
    ![Desired Orientations of Drone](images/desired_orientation_plot.png)
 
 ## Running the Project
