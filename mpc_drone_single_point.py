@@ -4,7 +4,6 @@ import time
 from pprint import pprint
 from resources.draw import *
 from matplotlib import pyplot as plt
-from plot3d import animate_3d
 from resources.trajectory import trajectory
 
 def shift_movement(T, t0, x0, u, f):
