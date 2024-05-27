@@ -2,10 +2,10 @@ import casadi as ca
 import numpy as np
 import time
 from pprint import pprint
-from draw import *
+from resources.draw import *
 from matplotlib import pyplot as plt
 from plot3d import animate_3d
-from trajectory import trajectory
+from resources.trajectory import trajectory
 
 def shift_movement(T, t0, x0, u, f):
     st = x0
