@@ -18,20 +18,21 @@ The primary objective of this project is to develop a control system for fully n
 - Fast point Stabilization 
 - Follow trajectory to pass through gates precisely
 - Avoid obstacles using state constraints
+  
 Quadrotors are widely used in various applications such as aerial photography, surveillance, delivery services and sports such as drone racing. However, their nonlinear dynamics and the presence of external disturbances make control a challenging task.
 
 ### Importance
-In the thrilling realm of drone racing, where split-second decisions determine victory, the need for precision control systems is paramount. This project focuses on harnessing Model Predictive Control (MPC) techniques tailored specifically for drone racing. By addressing the challenges of achieving rapid and precise point stabilization, as well as accurate trajectory following amidst high-speed maneuvers, this endeavor lays the groundwork for advancements in competitive drone racing. Moreover, by integrating obstacle avoidance strategies, the project expands the horizons of MPC applications in this intense sport. The insights gained from this project pave the way for future innovations, offering the potential to revolutionize the landscape of drone racing with cutting-edge algorithms and strategies. Additionally, addressing the nonlinear dynamics and external disturbances inherent in quadrotor systems is vital for ensuring safe and reliable operation in real-world scenarios.
+The project explores the application of MPC for trajectory tracking and obstacle avoidance while passing through gates, highlighting its potential for enhancing performance in this intense sport. The insights gained pave the way for future innovations, offering the potential to revolutionize drone racing with cutting-edge algorithms and strategies. Additionally, addressing the nonlinear dynamics and external disturbances inherent in quadrotor systems is vital for ensuring safe and reliable operation in real-world scenarios. This project emphasizes the importance of MPC in overcoming these challenges, setting the stage for future advancements in drone racing technology.
 
 ## Results
 The implemented MPC controller successfully stabilizes the drone at the desired point and follows specified trajectories. The results include:
-- Position tracking in 3D space.
-- Stability in orientation and velocity.
+- Responses of MPC for different horizons (N) and costs
+- Stability in orientation and velocity for trajectory tracking.
 
 ### Visual Aids
 The following plots illustrate the performance of the MPC controller:
 
-1. **Positions of Drone over Time**
+1. **MPC Response with N=**
    ![Positions of Drone](images/position_plot.png)
 
 2. **Orientation of Drone over Time**
