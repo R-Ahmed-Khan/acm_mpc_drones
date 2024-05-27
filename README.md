@@ -16,7 +16,7 @@ Quadrotors exhibit highly nonlinear behavior, especially when performing aggress
 ### Key Features
 
 - **Nonlinear Dynamics Handling**: Unlike Linear MPC, NMPC can directly incorporate the nonlinear equations of motion of the quadrotor, providing more accurate control.
-- **Optimization-Based Control**: Using NLP, the controller optimizes future control actions over a prediction horizon, considering both the current state and future states of the quadrotor.
+- **Optimization-Based Control**: Using NLP wtih CasADi, the controller optimizes future control actions over a prediction horizon, considering both the current state and future states of the quadrotor.
 - **Flexibility and Robustness**: NMPC can adapt to various flight conditions and disturbances, making it a robust solution for real-world applications.
 
 **Team Members:**
@@ -29,7 +29,7 @@ Quadrotors exhibit highly nonlinear behavior, especially when performing aggress
 
 ## Problem Statement
 The primary objective of this project is to develop a control system for fully non-linear quadrotor system that can achieve following tasks:
-- Fast point Stabilization 
+- Fast point stabilization 
 - Follow trajectory to pass through gates precisely
 - Avoid obstacles using state constraints
   
@@ -142,7 +142,7 @@ The quadrotor's dynamics are described by the following state-space equations, w
 - Angular velocities: $$\( \dot{\phi}, \dot{\theta}, \dot{\psi} \)$$ 
 
 #### Inputs
-- : Propeller speeds on each: $$\( u_1, u_2, u_3, u_4 \)$$
+- : Propeller speeds: $$\( u_1, u_2, u_3, u_4 \)$$
 
 #### Equations of Motion
 
@@ -189,8 +189,8 @@ The quadrotor's dynamics are described by the following state-space equations, w
 
 The cost function is designed to minimize the error between the current state and the desired state while penalizing large control inputs. It consists of a quadratic term for state deviation and another for control effort.
 
-$$Cost = \sum_{i=0}^{N-1} ((x_i - p)^T Q (x_i - p) + u_i^T R u_i) + (x_N - p)^T Q_{terminal} (x_N - p)$$
-
+$$Cost = \sum_{i=0}^{N-1} ((x_i - x_s)^T Q (x_i - x_p) + u_i^T R u_i) + (x_N - x_p)^T Q_{terminal} (x_N - x_p)$$
+where $$x_p$$ is desired state, $$x_i$$ is current state and $$x_N$$ is terminal state
 
 
 ## Directory Structure
