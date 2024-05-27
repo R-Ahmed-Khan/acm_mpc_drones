@@ -4,7 +4,7 @@ import time
 from pprint import pprint
 from resources.draw import *
 from matplotlib import pyplot as plt
-from trajectory import trajectory
+from resources.trajectory import trajectory
 from resources.draw import Draw_MPC_point_stabilization_3D
 
 
