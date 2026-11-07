@@ -28,14 +28,6 @@ Quadrotors exhibit highly nonlinear behavior, especially when performing aggress
 - **Optimization-Based Control**: Using NLP wtih CasADi, the controller optimizes future control actions over a prediction horizon, considering both the current state and future states of the quadrotor.
 - **Flexibility and Robustness**: NMPC can adapt to various flight conditions and disturbances, making it a robust solution for real-world applications.
 
-**Team Members:**
-- Roohan Ahmed Khan
-- Malaika Zafar
-- Amber Batool
-
-
-**Presentation:** [MPC Drones Final Presentation Link](https://drive.google.com/drive/folders/1E5tKipE3HwYkDtr1KWob1nK1J_9sDaNs?usp=drive_link)
-
 ## Problem Statement <a id="problem_statement"></a>
 The primary objective of this project is to develop a control system for fully non-linear quadrotor system that can achieve following tasks:
 - Fast point stabilization 
